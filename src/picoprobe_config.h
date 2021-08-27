@@ -46,7 +46,7 @@
 #endif
 
 
-// PIO config
+// PIO config - SparkFun Pro Micro RP2040
 #define PROBE_SM 0
 #define PROBE_PIN_OFFSET 16
 #define PROBE_PIN_SWCLK PROBE_PIN_OFFSET + 0 // 16
