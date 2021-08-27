@@ -48,9 +48,9 @@
 
 // PIO config
 #define PROBE_SM 0
-#define PROBE_PIN_OFFSET 2
-#define PROBE_PIN_SWCLK PROBE_PIN_OFFSET + 0 // 2
-#define PROBE_PIN_SWDIO PROBE_PIN_OFFSET + 1 // 3
+#define PROBE_PIN_OFFSET 16
+#define PROBE_PIN_SWCLK PROBE_PIN_OFFSET + 0 // 16
+#define PROBE_PIN_SWDIO PROBE_PIN_OFFSET + 1 // 17
 
 // Target reset config
 #define PROBE_PIN_RESET 6
