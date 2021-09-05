@@ -46,11 +46,18 @@
 #endif
 
 
-// PIO config - SparkFun Pro Micro RP2040
+// PIO config
 #define PROBE_SM 0
-#define PROBE_PIN_OFFSET 16
-#define PROBE_PIN_SWCLK PROBE_PIN_OFFSET + 0 // 16
-#define PROBE_PIN_SWDIO PROBE_PIN_OFFSET + 1 // 17
+
+#ifdef SPARKFUN_PROMICRO
+    #define PROBE_PIN_OFFSET PICO_DEFAULT_I2C_SDA_PIN
+    #define PICO_DEFAULT_LED_PIN PICO_DEFAULT_WS2812_PIN
+#else
+    #define PROBE_PIN_OFFSET 2
+#endif
+
+#define PROBE_PIN_SWCLK PROBE_PIN_OFFSET + 0
+#define PROBE_PIN_SWDIO PROBE_PIN_OFFSET + 1
 
 // Target reset config
 #define PROBE_PIN_RESET 6
